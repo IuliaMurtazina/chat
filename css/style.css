@@ -1,0 +1,184 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.54; }
+
+.background-image, .container {
+  max-width: 140rem;
+  margin: 0 auto; }
+
+.background-image {
+  background-image: url(../img/background.png);
+  background-size: cover; }
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: [navigation-start] 7.4rem [navigation-end friends-start] 26rem [friends-end chat-start] 1fr [chat-end profile-start] 20rem [profile-end];
+  justify-content: center;
+  backdrop-filter: blur(20px); }
+
+.navigation {
+  background-color: rgba(0, 0, 0, 0.7);
+  grid-column: navigation-start / navigation-end;
+  position: relative; }
+
+.dots, .dots::before, .dots::after {
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+  position: absolute; }
+
+.dots {
+  background-color: #FFBD2E;
+  top: 1rem;
+  left: 3rem; }
+  .dots::before {
+    content: "";
+    background-color: #FF6057;
+    left: -2rem; }
+  .dots::after {
+    content: "";
+    background-color: #29c941;
+    left: 2rem; }
+
+.icons, .icons-colored {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.icons {
+  height: 100vh;
+  justify-content: space-between; }
+  .icons__link {
+    position: relative; }
+    .icons__link::before {
+      content: "";
+      height: .8rem;
+      width: 0.8rem;
+      border-radius: 50%;
+      background-color: #919191;
+      position: absolute;
+      left: -2.1rem;
+      top: 1.5rem;
+      opacity: 0; }
+    .icons__link:link, .icons__link:visited {
+      text-decoration: none;
+      opacity: .3; }
+    .icons__link:hover, .icons__link:active, .icons__link:focus {
+      opacity: 1; }
+    .icons__link:focus::before {
+      opacity: 1; }
+  .icons__img {
+    height: 4rem;
+    width: 4rem;
+    position: relative; }
+
+.icons-colored {
+  gap: 2rem;
+  margin-top: 4rem; }
+
+.friends {
+  background-color: rgba(37, 39, 42, 0.75);
+  grid-column: friends-start / friends-end;
+  padding: 3.5rem 1rem 0 2.5rem;
+  overflow-y: scroll; }
+  .friends::-webkit-scrollbar {
+    width: 1.9rem; }
+  .friends::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0); }
+  .friends::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    border: 7px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box; }
+  .friends > * {
+    font-size: 1.4rem;
+    color: #B5B5B5; }
+  .friends__title {
+    justify-content: space-between; }
+  .friends__heading {
+    gap: 0.5rem; }
+  .friends__treads {
+    padding: 3rem 0; }
+    .friends__treads p {
+      margin-left: 1rem; }
+  .friends__list {
+    padding: 2rem 1.2rem;
+    display: grid;
+    grid-template-columns: 3.2rem 1fr;
+    align-items: center;
+    gap: 1.2rem; }
+  .friends__icon {
+    fill: #fff; }
+    .friends__icon--1 {
+      width: 1.2rem;
+      height: .8rem;
+      margin-top: 0.3rem; }
+    .friends__icon--2 {
+      height: 1.6rem;
+      width: 1.6rem; }
+    .friends__icon--3 {
+      height: 1.8rem;
+      width: 1.8rem; }
+  .friends__photo {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 3px; }
+  .friends__name {
+    position: relative; }
+    .friends__name::before {
+      content: "";
+      width: 0.8rem;
+      height: 0.8rem;
+      background-color: #919191;
+      border-radius: 50%;
+      position: absolute;
+      left: -6rem;
+      top: .7rem; }
+    .friends__name--online::before {
+      background-color: #70CC16; }
+
+.flex-v-c {
+  display: flex;
+  align-items: center; }
+
+.heading-1 {
+  font-size: 2rem;
+  color: #fff; }
+
+.heading-3, .friends__title--count {
+  font-size: 1.2rem;
+  color: #919191;
+  text-transform: uppercase; }
+
+.channels {
+  padding: 1.5rem 0; }
+  .channels__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none; }
+  .channels__link:link, .channels__link:visited {
+    display: block;
+    text-decoration: none;
+    color: #B5B5B5;
+    font-size: 1.4rem;
+    padding: .3rem 1.3rem .7rem 1.3rem;
+    border-radius: 5px; }
+  .channels__link:hover, .channels__link:active, .channels__link:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 700; }
+
+.profile {
+  background-color: #c3e4ff;
+  grid-column: profile-start / profile-end; }

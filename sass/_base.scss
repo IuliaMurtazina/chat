@@ -1,0 +1,44 @@
+$color-black: #000;
+$color-white: #fff;
+
+$color-grey-1: #B5B5B5;
+$color-grey-2: #919191;
+$color-grey-3: #5F6164;
+
+$color-links: #3577EF;
+
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.54;
+}
+
+.background-image, .container {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+.background-image {
+    background-image: url(../img/background.png);
+    background-size: cover;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: [navigation-start] 7.4rem [navigation-end friends-start] 26rem [friends-end chat-start] 1fr [chat-end profile-start] 20rem [profile-end];
+    justify-content: center;
+    backdrop-filter: blur(20px);
+}

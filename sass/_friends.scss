@@ -1,0 +1,145 @@
+.friends {
+    background-color: rgba(37, 39, 42, .75);
+    grid-column: friends-start / friends-end;
+
+    padding: 3.5rem 1rem 0 2.5rem;
+
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 1.9rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, .2);
+        border-radius: 50px;
+        border: 7px solid rgba(0, 0, 0, 0);
+        background-clip: padding-box;
+    }
+
+    & > * {
+        font-size: 1.4rem;
+        color: $color-grey-1;
+    }
+
+    &__title {
+        justify-content: space-between;
+    }
+
+    &__heading {
+        gap: 0.5rem;
+    }
+
+    &__treads {
+        padding: 3rem 0;
+    
+        p {
+            margin-left: 1rem;
+        }
+    }
+
+    &__list {
+        padding: 2rem 1.2rem;
+        display: grid;
+        grid-template-columns: 3.2rem 1fr;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    &__icon {
+        fill: $color-white;
+        
+        &--1 {
+            width: 1.2rem;
+            height: .8rem;
+            margin-top: 0.3rem;
+        }
+        
+        &--2 {
+            height: 1.6rem;
+            width: 1.6rem;
+        }
+
+        &--3 {
+            height: 1.8rem;
+            width: 1.8rem;
+        }
+    }
+
+    &__photo {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 3px;
+    }
+
+    &__name {
+    position: relative;
+
+        &::before {
+            content: "";
+            width: 0.8rem;
+            height: 0.8rem;
+            background-color: $color-grey-2;
+            border-radius: 50%;
+            position: absolute;
+            left: -6rem;
+            top: .7rem;
+        }
+
+        &--online {
+
+            &::before {
+                background-color: #70CC16;
+            }
+        }
+    }
+}
+
+.flex-v-c {
+    display: flex;
+    align-items: center;
+}
+
+.heading-1 {
+    font-size: 2rem;
+    color: $color-white;
+}
+
+.heading-3, .friends__title--count {
+    font-size: 1.2rem;
+    color: $color-grey-2;
+    text-transform: uppercase;
+    
+}
+
+.channels {
+    padding: 1.5rem 0;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+    }
+
+    &__link {
+
+        &:link, &:visited {
+            display: block;
+            text-decoration: none;
+            color: $color-grey-1;
+            font-size: 1.4rem;
+            padding: .3rem 1.3rem .7rem 1.3rem;
+            border-radius: 5px;
+        }
+
+        &:hover, &:active, &:focus {
+            background-color: rgba(255, 255, 255, .2);
+            color: $color-white;
+            font-weight: 700;
+        }
+    }
+}
