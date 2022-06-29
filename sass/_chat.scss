@@ -1,0 +1,232 @@
+// HEADER
+
+.chat {
+    grid-column: chat-start / chat-end;
+    background-color: $color-white;
+}
+
+.header {
+    padding: 3rem 2.4rem 1.4rem 2.4rem;
+    gap: .5rem;
+    border-bottom: 1px solid $color-grey-4;
+
+    &__icon {
+        height: 1.5rem;
+        width: 1.5rem;
+        fill: $color-grey-1;
+
+        &--1 {
+            margin-right: auto;
+        }
+
+        &--2 {
+            width: 1rem;
+        }
+
+        &--3 {
+            transform: translateY(3px);
+        }
+
+        &--4 {
+            margin-right: 1rem;
+        }
+    }
+
+    span {
+        font-size: 1.4rem;
+        color: $color-grey-1;
+    }
+}
+
+.heading-2 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.input {
+    font-family: inherit;
+    color: inherit;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+        color: $color-grey-1;
+        font-size: 1.4rem;
+    }
+}
+
+.search {
+    margin-left: 2.4rem;
+    
+    &__input {
+        border: 0.5px solid rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: .8rem 1.6rem;
+    }
+
+    &__button {
+        border: none;
+        background-color: $color-white;
+        transform: translateX(-3rem);
+    }
+}
+
+.notification {
+    position: relative;
+    margin-top: 5px;
+
+    &__sign {
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: #FD4948;
+        border-radius: 50%;
+        position: absolute;
+        top: -2px;
+        right: .7rem;
+    }
+}
+
+// MESSAGE 
+
+.messages {
+    padding: 2rem 2.4rem;
+    display: grid;
+    grid-template-columns: 3.4rem 1fr;
+    column-gap: 1.2rem;
+
+    overflow-y: scroll;
+    height: calc(100vh - 7.7rem - 7.9rem);
+
+    &::-webkit-scrollbar {
+        width: 2rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, .2);
+        border-radius: 50px;
+        border: 7px solid rgba(0, 0, 0, 0);
+        background-clip: padding-box;
+    }
+
+}
+
+.message {
+    display: grid;
+    grid-template-columns: repeat(2, max-content) 1fr;
+    column-gap: 0.8rem;
+    margin-top: -2px;
+    margin-bottom: 1rem;
+
+    &__photo {
+        height: 3.4rem;
+        width: 3.4rem;
+        border-radius: 5px;
+    }
+
+    &__name {
+        font-size: 1.2rem;
+        color: $color-black;
+        font-weight: 700;
+    }
+
+    &__time {
+        font-size: 1.2rem;
+        color: $color-grey-2;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        grid-column: 1 / -1;
+
+        font-size: 1.3rem;
+        color: $color-black;
+        margin-top: -2px;
+
+        &--link {
+            color: $color-links;
+        }
+    }
+
+    &__date {
+        font-size: 1.3rem;
+        color: $color-grey-2;
+        text-align: center;
+        margin-bottom: 0.5rem;
+
+
+        grid-column: 1 / -1;
+
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        column-gap: 1.5rem;
+        align-items: center;
+
+        &::before, &::after {
+            content: "";
+            background-color: $color-grey-4;
+            height: 1px;
+            display: block;
+        }
+    }
+
+    &__img {
+        position: relative;
+
+        img {
+            grid-column: 1 / -1;
+
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+    }
+
+    &__reaction{
+        font-size: 1.2rem;
+        background-color: $color-white;
+        width: 4.5rem;
+        height: 2.5rem;
+        border-radius: 5px;
+        box-shadow: 0 .2rem .8rem rgba(0, 0, 0, 0.14);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        top: 20rem;
+        left: 25rem;
+    }
+}
+
+//FOOTER 
+.footer {
+    border-top: 1px solid $color-grey-4;
+    padding: 2rem;
+    gap: 2rem;
+
+    &__icon {
+        fill: $color-grey-1;
+        height: 2.2rem;
+
+        &--1, &--2 {
+            width: 1.4rem;
+        }
+
+        &--3 {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    &__input {
+        flex-grow: 1;
+        padding: 1rem 0;
+        border: none;
+    }
+}
