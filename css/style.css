@@ -133,9 +133,12 @@ body {
   .friends__photo {
     width: 3.2rem;
     height: 3.2rem;
-    border-radius: 3px; }
+    border-radius: 3px;
+    object-fit: cover; }
   .friends__name {
-    position: relative; }
+    position: relative;
+    text-decoration: none;
+    color: inherit; }
     .friends__name::before {
       content: "";
       width: 0.8rem;
@@ -265,7 +268,8 @@ body {
   .message__photo {
     height: 3.4rem;
     width: 3.4rem;
-    border-radius: 5px; }
+    border-radius: 5px;
+    object-fit: cover; }
   .message__name {
     font-size: 1.2rem;
     color: #000;
@@ -351,20 +355,19 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2px; }
+  .profile__nickname {
+    gap: .7rem; }
   .profile__name {
     font-weight: 700;
     font-size: 1.6rem;
     position: relative; }
-    .profile__name::after {
-      content: "";
-      width: 0.8rem;
-      height: 0.8rem;
-      background-color: #919191;
-      border-radius: 50%;
-      position: absolute;
-      left: 9.5rem;
-      top: 0.9rem; }
-    .profile__name--online::after {
+  .profile__status {
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: #919191;
+    border-radius: 50%;
+    margin-right: auto; }
+    .profile__status--online {
       background-color: #70CC16; }
   .profile__social {
     display: flex;
@@ -428,3 +431,40 @@ body {
   font-weight: 400;
   font-size: 1.2rem;
   color: #5F6164; }
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup__photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; }
+  .popup__content {
+    background-color: #d4d8dc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 25rem 20rem; }
+  .popup__description {
+    padding: 1.4rem 2rem 2.8rem 2rem; }
+  .popup__close {
+    text-decoration: none;
+    color: #5F6164;
+    font-size: 1.6rem; }

@@ -74,10 +74,13 @@
         width: 3.2rem;
         height: 3.2rem;
         border-radius: 3px;
+        object-fit: cover;
     }
 
     &__name {
     position: relative;
+    text-decoration: none;
+    color: inherit;
 
         &::before {
             content: "";

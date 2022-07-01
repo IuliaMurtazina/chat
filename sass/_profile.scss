@@ -19,27 +19,25 @@
         gap: 2px;
     }
 
+    &__nickname {
+        gap: .7rem;
+    }
+
     &__name {
         font-weight: 700;
         font-size: 1.6rem;
         position: relative;
+    }
 
-        &::after {
-            content: "";
-            width: 0.8rem;
-            height: 0.8rem;
-            background-color: $color-grey-2;
-            border-radius: 50%;
-            position: absolute;
-            left: 9.5rem;
-            top: 0.9rem;
-        }
+    &__status {
+        width: 0.7rem;
+        height: 0.7rem;
+        background-color: $color-grey-2;
+        border-radius: 50%;
+        margin-right: auto;
 
         &--online {
-
-            &::after {
-                background-color: #70CC16;
-            }
+            background-color: #70CC16;
         }
     }
 
