@@ -121,7 +121,7 @@
     grid-template-columns: repeat(2, max-content) 1fr;
     column-gap: 0.8rem;
     margin-top: -2px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 
     &__photo {
         height: 3.4rem;
@@ -153,11 +153,17 @@
         }
     }
 
+    &__link {
+        color: $color-links;
+        text-decoration: none;
+    }
+
     &__date {
         font-size: 1.3rem;
         color: $color-grey-2;
         text-align: center;
         margin-bottom: 0.5rem;
+        margin-top: -0.5rem;
 
 
         grid-column: 1 / -1;
