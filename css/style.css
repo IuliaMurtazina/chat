@@ -224,7 +224,8 @@ body {
   .search__input {
     border: 0.5px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    padding: .8rem 1.6rem; }
+    padding: .8rem 1.6rem;
+    width: 24rem; }
   .search__button {
     border: none;
     background-color: #fff;
@@ -305,9 +306,9 @@ body {
       height: 1px;
       display: block; }
   .message__img {
-    position: relative; }
+    position: relative;
+    grid-column: 1 / -1; }
     .message__img img {
-      grid-column: 1 / -1;
       margin: 1rem 0;
       border-radius: 5px; }
   .message__reaction {
