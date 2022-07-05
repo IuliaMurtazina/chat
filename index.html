@@ -12,6 +12,7 @@
     <title>Chat</title>
 </head>
 <body>
+
     <div class="background-image">
 
         <div class="container" id="chat">
@@ -34,8 +35,8 @@
 
             <section class="friends">
 
-                <div class="friends__title flex-v-c">
-                    <div class="friends__heading flex-v-c">
+                <div class="friends__title">
+                    <div class="friends__heading">
                         <h1 class="heading-1">Nomad List</h1>
                         <svg class="friends__icon friends__icon--1">
                             <use xlink:href="img/sprite.svg#d-arrow"></use>
@@ -46,14 +47,14 @@
                     </svg>
                 </div>
 
-                <div class="friends__treads flex-v-c">
+                <div class="friends__treads">
                     <svg class="friends__icon friends__icon--3">
                         <use xlink:href="img/sprite.svg#message"></use>
                     </svg>
                     <p>All treads</p>
                 </div>
 
-                <div class="friends__title flex-v-c">
+                <div class="friends__title">
                     <h3 class="heading-3">channels</h3>
                     <span class="friends__title--count">11</span>
                 </div>
@@ -74,7 +75,7 @@
                     </ul>
                 </div>
 
-                <div class="friends__title flex-v-c">
+                <div class="friends__title">
                     <h3 class="heading-3">friends</h3>
                     <span class="friends__title--count">82</span>
                 </div>
@@ -109,7 +110,7 @@
 
             <section class="chat">
 
-                <div class="header flex-v-c">
+                <div class="header">
                     <h2 class="heading-2">#general</h2>
                     <svg class="header__icon header__icon--1">
                         <use xlink:href="img/sprite.svg#star"></use>
@@ -191,7 +192,7 @@
                     </div>
                 </div>
 
-                <div class="footer flex-v-c">
+                <div class="footer">
                     <svg class="footer__icon footer__icon--1">
                         <use xlink:href="img/sprite.svg#clip"></use>
                     </svg>
@@ -207,7 +208,7 @@
             <section class="profile">
                 <img src="img/profile-photo.png" alt="Profile photo" class="profile__photo">
                 <div class="profile__description">
-                    <div class="profile__nickname flex-v-c">
+                    <div class="profile__nickname">
                         <h4 class="profile__name">Amilia Luna</h4>
                         <div class="profile__status profile__status--online"></div>
                     </div>
@@ -225,7 +226,15 @@
                         </a>
                         <a href="#" class="profile__link">
                             <svg class="profile__icon profile__icon--3">
-                                <use xlink:href="img/sprite.svg#instagram"></use>
+                                <use xlink:href="img/sprite.svg#instagram" class="insta-gradient"></use>
+                                <defs>
+                                    <radialGradient id="gradient" r="150%" cx="30%" cy="107%">
+                                        <stop stop-color="#787676" offset="0" />
+                                        <stop stop-color="#787676" offset="0.45" />
+                                        <stop stop-color="#787676" offset="0.6" />
+                                        <stop stop-color="#787676" offset="0.9" />
+                                    </radialGradient>
+                                </defs>
                             </svg>
                         </a>
                         <a href="#" class="profile__link">
@@ -261,7 +270,7 @@
                 <img src="img/friend-1.jpg" alt="Profile photo" class="popup__photo">
             </div>
             <div class="popup__description">
-                <div class="profile__nickname flex-v-c">
+                <div class="profile__nickname">
                     <h4 class="profile__name">Orlando Diggs</h4>
                     <div class="profile__status profile__status--online"></div>
                     <a href="#chat" class="popup__close">&times;</a>
@@ -311,7 +320,7 @@
                 <img src="img/friend-2.jpg" alt="Profile photo" class="popup__photo">
             </div>
             <div class="popup__description">
-                <div class="profile__nickname flex-v-c">
+                <div class="profile__nickname">
                     <h4 class="profile__name">Carmen Velasco</h4>
                     <div class="profile__status profile__status--online"></div>
                     <a href="#chat" class="popup__close">&times;</a>
@@ -361,7 +370,7 @@
                 <img src="img/friend-3.jpg" alt="Profile photo" class="popup__photo">
             </div>
             <div class="popup__description">
-                <div class="profile__nickname flex-v-c">
+                <div class="profile__nickname">
                     <h4 class="profile__name">Marie Jensen</h4>
                     <div class="profile__status"></div>
                     <a href="#chat" class="popup__close">&times;</a>

@@ -8,6 +8,11 @@ $color-grey-4: #e4e4e4;
 
 $color-links: #3577EF;
 
+@mixin flex-v-c {
+    display: flex;
+    align-items: center;
+}
+
 
 *, *::after, *::before {
     margin: 0;

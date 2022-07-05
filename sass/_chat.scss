@@ -6,6 +6,7 @@
 }
 
 .header {
+    @include flex-v-c;
     padding: 3rem 2.4rem 1.4rem 2.4rem;
     gap: .5rem;
     border-bottom: 1px solid $color-grey-4;
@@ -213,6 +214,7 @@
 
 //FOOTER 
 .footer {
+    @include flex-v-c;
     border-top: 1px solid $color-grey-4;
     padding: 2rem;
     gap: 2rem;

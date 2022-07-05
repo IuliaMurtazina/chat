@@ -27,14 +27,17 @@
     }
 
     &__title {
+        @include flex-v-c;
         justify-content: space-between;
     }
 
     &__heading {
+        @include flex-v-c;
         gap: 0.5rem;
     }
 
     &__treads {
+        @include flex-v-c;
         padding: 3rem 0;
     
         p {
